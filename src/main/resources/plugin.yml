@@ -7,3 +7,5 @@ commands:
     usage: /create <name>
   list:
     usage: /list
+  teleport:
+    usage: /teleport <name>
