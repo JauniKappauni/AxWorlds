@@ -1,0 +1,4 @@
+name: AxWorlds
+version: '1.0-SNAPSHOT'
+main: de.jauni.axworlds.AxWorlds
+api-version: '1.21'
