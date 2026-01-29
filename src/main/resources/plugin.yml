@@ -9,3 +9,5 @@ commands:
     usage: /list
   teleport:
     usage: /teleport <name>
+  remove:
+    usage: /remove <name>
