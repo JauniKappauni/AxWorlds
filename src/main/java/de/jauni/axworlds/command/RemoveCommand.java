@@ -19,6 +19,9 @@ public class RemoveCommand implements CommandExecutor {
     }
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String @NotNull [] args) {
+        if(!(sender instanceof Player)){
+            sender.sendMessage("Nur Spieler dürfen diesen Befehl verwenden!");
+        }
         World world = Bukkit.getWorld(args[0]);
         World defaultWorld = Bukkit.getWorld("world");
         Location defaultSpawnLocation = defaultWorld.getSpawnLocation();

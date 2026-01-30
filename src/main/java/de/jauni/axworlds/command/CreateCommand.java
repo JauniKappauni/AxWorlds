@@ -20,6 +20,9 @@ public class CreateCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String @NotNull [] args) {
+        if(!(sender instanceof Player)){
+            sender.sendMessage("Nur Spieler dürfen diesen Befehl verwenden!");
+        }
         World newWorld = Bukkit.getServer().createWorld(WorldCreator.name(args[0]));
         Player p = (Player) sender;
         Location spawnLocation = newWorld.getSpawnLocation();

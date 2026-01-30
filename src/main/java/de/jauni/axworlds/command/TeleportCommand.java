@@ -11,6 +11,9 @@ import org.jetbrains.annotations.NotNull;
 public class TeleportCommand implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String @NotNull [] args) {
+        if(!(sender instanceof Player)){
+            sender.sendMessage("Nur Spieler dürfen diesen Befehl verwenden!");
+        }
         Player p = (Player) sender;
         World targetWorld = Bukkit.getWorld(args[0]);
         p.teleport(targetWorld.getSpawnLocation());
