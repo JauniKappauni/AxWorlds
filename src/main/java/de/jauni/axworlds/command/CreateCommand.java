@@ -25,7 +25,7 @@ public class CreateCommand implements CommandExecutor {
         Location spawnLocation = newWorld.getSpawnLocation();
         spawnLocation.getChunk().load();
         p.teleport(spawnLocation);
-        p.sendMessage("Your world" + " " + args[0] + " " + "was created successfully!");
+        p.sendMessage("Du hast die Welt" + " " + args[0] + " " + "erstellt!");
         reference.getConfig().set("worlds" + "." + args[0], true);
         reference.saveConfig();
         return true;

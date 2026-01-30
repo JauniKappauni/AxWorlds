@@ -28,6 +28,7 @@ public class RemoveCommand implements CommandExecutor {
         Bukkit.unloadWorld(world, true);
         File worldFolder = world.getWorldFolder();
         deleteFolder(worldFolder);
+        sender.sendMessage("Du hast die Welt" + " " + args[0] + " " + "gelöscht!");
         reference.getConfig().set("worlds" + "." + args[0], null);
         reference.saveConfig();
         return true;
